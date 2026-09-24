@@ -1,6 +1,7 @@
 # LangChain Core
 langchain
 langchain-core
+sentence-transformers
 
 # OpenAI Integration
 langchain-openai
