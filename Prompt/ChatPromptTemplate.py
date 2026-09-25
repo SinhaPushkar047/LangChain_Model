@@ -15,7 +15,7 @@ model= ChatHuggingFace(llm=llm)
 
 prompt=ChatPromptTemplate.from_messages([
     ("system","You are Travel Guide who make best trip planning list in point wise format"),
-    ("human","Give the place to visit and special culture and food to eat in {location} ")
+    ("human","Give the place to visit and special culture and food to eat in {location}")
 ])
 
 message=prompt.invoke({'location':'Rajasthan'})

@@ -1,0 +1,2 @@
+HumanMessage(content="What is a BJT?"),
+AIMessage(content="A BJT is a Bipolar Junction Transistor.")
