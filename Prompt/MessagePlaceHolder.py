@@ -22,10 +22,7 @@ prompt=ChatPromptTemplate.from_messages([
 chat_history = []
 
 with open(r'Prompt\chat_history.txt') as f:
-    for line in f:
-        line = line.strip().rstrip(',')
-        if line:
-            chat_history.append(eval(line))
+    chat_history.extend(f.readlines())
 
 print(chat_history)
 
