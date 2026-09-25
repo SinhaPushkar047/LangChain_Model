@@ -24,7 +24,6 @@ chat_history = []
 with open(r'Prompt\chat_history.txt') as f:
     chat_history.extend(f.readlines())
 
-print(chat_history)
 
 message = prompt.invoke({'chat_history':chat_history, 'question':'What is Pn junction diode'})
 
