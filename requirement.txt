@@ -30,3 +30,6 @@ scikit-learn
 transformers
 torch
 accelerate
+
+#Check which model can we used as chat model form HF
+#hf models ls --warm --filter text-generation --expand inferenceProviderMapping
