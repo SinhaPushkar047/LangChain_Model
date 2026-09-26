@@ -31,5 +31,8 @@ transformers
 torch
 accelerate
 
+#Web hosting streamlit
+streamlit
+
 #Check which model can we used as chat model form HF
 #hf models ls --warm --filter text-generation --expand inferenceProviderMapping
