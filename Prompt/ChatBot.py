@@ -1,19 +1,14 @@
 from langchain_core.prompts import ChatPromptTemplate,MessagesPlaceholder
 from langchain_core.messages import SystemMessage,HumanMessage,AIMessage
-from langchain_huggingface import ChatHuggingFace,HuggingFaceEndpoint
+from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
 load_dotenv()
 
-llm=HuggingFaceEndpoint(
-    repo_id='openai/gpt-oss-120b',
-    provider='groq',
-    task='text-generation',
-    max_new_tokens=1000
+llm = ChatGroq(
+    model="openai/gpt-oss-120b",
+    temperature=0.2
 )
-
-model=ChatHuggingFace(llm=llm)
-
 
 chat_history = [
     SystemMessage(content='You are a helpful AI assistant')
@@ -35,7 +30,7 @@ while True:
         "question": question
     })
 
-    result=model.invoke(message)
+    result=llm.invoke(message)
 
     print("AI: ", result.content)
 
