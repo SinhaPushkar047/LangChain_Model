@@ -12,7 +12,7 @@ openai
 langchain-anthropic
 
 #Nvidia
-nvidia-ai-endpoints
+langchain-nvidia-ai-endpoints
 
 # Google Gemini (PaLM) Integration
 langchain-google-genai
